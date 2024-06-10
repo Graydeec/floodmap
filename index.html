@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Overlay Map Types</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="input_wrapper">
+        <div id="info_wrapper">
+          <p class="info">Width</p>
+          <p class="info" id="cur_width">25</p>
+          <p class="info">Height</p>
+          <p class="info" id="cur_height">25</p>
+          <p class="info">Threshold</p>
+          <p class="info" id="cur_threshold">1</p>
+          <div class="input">
+            <p class="info">Width:</p>
+            <input id="w_input" class="info" type="text" />
+          </div>
+          <div class="input">
+            <p class="info">Height:</p>
+            <input id="h_input" class="info" type="text" />
+          </div>
+          <div class="input">
+            <p class="info">Threshold:</p>
+            <input id="t_input" class="info" type="text" />
+          </div>
+          <div>
+            <button id="btn_update">update</button>
+          </div>
+        </div>
+      </div>
+      <div class="map" id="map"></div>
+      <div id="overview_container">
+        <div id="overview"></div>
+      </div>
+    </div>
+    <!-- 
+      The `defer` attribute causes the callback to execute after the full HTML
+      document has been parsed. For non-blocking uses, avoiding race conditions,
+      and consistent behavior across browsers, consider loading using Promises.
+      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+      for more information.
+      -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>

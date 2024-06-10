@@ -1,0 +1,77 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+  height: 100%;
+}
+
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container,
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  position: relative;
+}
+
+#input_wrapper {
+  position: absolute;
+  display: flex;
+  top: 15px; /* Adjust the top position as needed */
+  left: 200px; /* Adjust the left position as needed */
+  z-index: 1000; /* Ensure the input field is on top of the map */
+  background-color: beige;
+  padding: 10px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  height: 30px;
+}
+
+#info_wrapper {
+  display: flex;
+  
+  align-items: center;
+}
+
+.info {
+  top: 50%;
+  padding: 5px 5px;
+  margin: 0px;
+}
+
+.input{
+  display: flex;
+  padding: 5px 5px;
+  width: 120px;
+}
+
+#w_input, #h_input, #t_input {
+  width: 40px;
+}
+
+#overview_container {
+  position: absolute;
+  right: 60px;
+  height: 400px;
+  width: 400px;
+  top: 60px;
+  padding: 5px 5px;
+  background-color:azure;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#overview {
+  width: 100%;
+  height: 100%;
+}
